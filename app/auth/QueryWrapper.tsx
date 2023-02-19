@@ -8,8 +8,6 @@ interface Props {
 
 const queryClient = new QueryClient()
 
-
-
 const QueryWrapper = ({children}: Props) => (
     <QueryClientProvider client={queryClient}>
         <Toaster/>

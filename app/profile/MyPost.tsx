@@ -15,6 +15,7 @@ export default function MyPosts(){
         queryKey: ["auth-posts"],
     })
     if(isLoading) return <h1>Loading your post...</h1>
+    
     return (
         <div>
             {data?.posts?.map(dt => {
@@ -27,7 +28,6 @@ export default function MyPosts(){
                          comments={dt.comments}
                         />
             })}
-         
         </div>
     )
 }

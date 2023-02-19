@@ -8,8 +8,8 @@ export default async function Dashboard() {
     if(!session) redirect('/api/auth/signin')
     return (
         <main>
-            <h1 className="text-2xl font-bold">Welcome Back {session?.user?.name}</h1>
-            <MyPosts />
+          <h1 className="text-2xl font-bold">Welcome Back {session?.user?.name}</h1>
+          <MyPosts />
         </main>
     )
 }

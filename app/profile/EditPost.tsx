@@ -39,24 +39,25 @@ export default function EditPost({avatar, name, title,comments, id}: EditProps) 
         deleteToastId = toast.loading('Deleting your post', {id: deleteToastId})
         mutate(id)
     }
+
         return (
             <>
-            <div className='bg-white my-8 p-8 rounded-lg'>
+              <div className='bg-white my-8 p-8 rounded-lg'>
                 <div className='flex item-center gap02'>
-                    <Image width={33} height={33} src={avatar} alt="avatar" />
-                    <h3 className='font-bold text-gray-700'>{name}</h3>
+                  <Image width={33} height={33} src={avatar} alt="avatar" />
+                  <h3 className='font-bold text-gray-700'>{name}</h3>
                 </div>
                 <div className='my-8'>
-                    <p className='break-all'>{title}</p>
+                  <p className='break-all'>{title}</p>
                 </div>
                 <div className='flex item-center gap-4'>
-                    <p className='text-sm font-bold text-gray-700'>
-                        {comments?.length} Comments
-                    </p>
-                    <button onClick={()=> setToggle(true)} className='text-sm font-bold text-red-500'>Delete</button>
+                  <p className='text-sm font-bold text-gray-700'>
+                    {comments?.length} Comments
+                  </p>
+                <button onClick={()=> setToggle(true)} className='text-sm font-bold text-red-500'>Delete</button>
                 </div>
-            </div>
-           {toggle && <Toggle deletePost={deletePost} setToggle={setToggle} /> } 
+              </div>
+             {toggle && <Toggle deletePost={deletePost} setToggle={setToggle} /> } 
             </>
         )
 }

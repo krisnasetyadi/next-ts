@@ -11,12 +11,12 @@ type User = {
 export default function Logged({image}: User){
     return (
         <li className="flex gap-8 items-center">
-           <button onClick={()=>signOut()} className="bg-gray-700 text-white text-sm px-6 py-2 rounded-md">
-              Sign Out
-            </button> 
-            <Link href={'/dashboard'}>
-                <Image width={64} height={64} src={image} alt="image" className="rounded-full" />
-            </Link>
+          <Link href={'/profile'}>
+            <Image width={64} height={64} src={image} alt="image" className="rounded-full" />
+          </Link>
+          <button onClick={()=>signOut()} className="font-bold bg-gray-700 text-white text-sm px-6 py-2 rounded-md">
+             Sign Out
+          </button> 
         </li>
     )
 }
